@@ -410,6 +410,7 @@ app.put("/update-dog", async (req, res) => {
         name: formData?.name ? formData.name : user?.name,
         url: formData?.url ? formData.url : user?.url,
         age: formData?.age ? formData.age : user?.age,
+        breed: formData?.breed ? formData.breed : user?.breed,
       },
     };
     const insertedUser = await users.updateOne(query, updateDocument);
