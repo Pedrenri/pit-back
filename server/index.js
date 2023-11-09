@@ -647,7 +647,7 @@ app.put("/addpet", async (req, res) => {
     const insertDocument = {
       id: generatePetID,
       owner_id: formData.owner_id,
-      owner_name:formData.onwer_name,
+      owner_name:formData.owner_name,
       name: formData.name,
       age: formData.age,
       gender_identity: formData.gender,
