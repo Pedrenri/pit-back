@@ -362,8 +362,8 @@ app.put("/user", async (req, res) => {
 
 //VERIFICATION
 app.post("/verification", async (req, res) => {
-   /* const userVerificationCode = req.body.verificationCode;
-  const userId = req.cookies.UserId; */ // Altere para o nome correto do cookie armazenado no navegador 
+  /* const userVerificationCode = req.body.verificationCode;
+ const userId = req.cookies.UserId; */ // Altere para o nome correto do cookie armazenado no navegador 
   const { userId, verificationCode } = req.body;
 
   const client = new MongoClient(uri);
@@ -512,7 +512,7 @@ function gerarSenha() {
   while (senha.length < 6) {
     senha +=
       caracteresRestantes[
-        Math.floor(Math.random() * caracteresRestantes.length)
+      Math.floor(Math.random() * caracteresRestantes.length)
       ];
   }
 
@@ -649,7 +649,7 @@ app.put("/addpet", async (req, res) => {
     const insertDocument = {
       id: generatePetID,
       owner_id: formData.owner_id,
-      owner_name:formData.owner_name,
+      owner_name: formData.owner_name,
       name: formData.name,
       age: formData.age,
       gender_identity: formData.gender,
@@ -694,4 +694,4 @@ app.get("/dog-breeds", async (req, res) => {
   }
 });
 
-app.listen(PORT,  () => console.log("Server running on PORT" + PORT));
+app.listen(PORT, () => console.log("Server running on PORT" + PORT));
