@@ -132,7 +132,7 @@ app.post("/signup", async (req, res) => {
       service: "gmail",
       auth: {
         user: "pitpetmatch@gmail.com",
-        pass: "pcnxlfabwlqssefq",
+        pass: "piih fueo izse vewd",
       },
     });
 
